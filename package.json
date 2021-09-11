@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@2fd/graphdoc": "^2.4.0",
+    "graphdoc-plugin-schema": "^2.0.0"
+  }
+}

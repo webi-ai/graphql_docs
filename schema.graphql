@@ -1,0 +1,190 @@
+# This is a test comment about nodes.
+type Node {
+    id: ID!
+    geometry: String!
+    osmId: String!
+    changeset: Int!
+    version: Int!
+    timestamp: String!
+    tags: String!
+    lat: Float!
+    lon: Float!
+
+}
+
+type Edge {
+    id: ID!
+    len: String!
+    v: String!
+    u: String!
+    geometry: String!
+    osm_type: String!
+    tags: String!
+    version: Int!
+    timestamp: String!
+    osmId: String!
+    width: String! 
+    tunnel: String!
+    surface: String!
+    segregated: String!
+    service: String!
+    psv: String!
+    overtaking: String!
+    oneway: String!
+    name: String!
+    motor_vehicle: String!
+    motorcar: String!
+    maxspeed: String!
+    lit: String!
+    lanes: Int!
+    int_ref: String!
+    highway: String!
+    footway: String!
+    foot: String!
+    cycleway: String!
+    bridge: String!
+    bicycle: String!
+    area: String!
+    access: String!   
+}
+
+
+type PointOfInterest {
+    id: ID!
+    addr_full: String!
+    addr_city: String!
+    addr_country: String!
+    addr_housenumber: String!
+    addr_housename: String!
+    addr_postcode: String!
+    addr_street: String!
+    addr_place: String!
+    email: String!
+    name: String!
+    opening_hours: String!
+    operator: String!
+    phone: String!
+    private_or_public: String! #ref tag
+    url: String!
+    website: String!
+    building: String!
+    amenity: String!
+    building_levels: String!
+    landuse: String!
+    office: String!
+    shop: String!
+    source: String!
+    start_date: String!
+    wikipedia: String!
+    osmId: String!
+    timestamp: String!
+    version: Int!
+    geometry: String!
+    tags: String!
+    osm_type: String!
+    internet_access: String!
+    changeset: Int!
+    craft:  String!
+    lat: Float!
+    lon: Float!
+    atm: String!
+    bicycle_parking: String!
+    cafe: String!
+    childcare: String!
+    parking: String!
+    social_facility: String!
+    books: String!
+    butcher: String!
+    clothes: String!
+    erotic: String!
+    religion: String!
+    second_hand: String!
+    information: String!
+    tourism: String!
+    bicycle: String!
+    coffee:String!
+    collector:String!
+    dry_cleaning:String!
+    fuel:String!
+    furniture:String!
+    massage:String!
+    motorcycle:String!
+    music:String!
+    organic:String!
+    outdoor:String!
+    pet:String!
+    trade:String!
+    wine:String!
+    attraction:String!
+    museum:String!
+    bar:String!
+    car_wash:String!
+    drinking_water:String!
+    leisure:String!
+    outdoor_seating:String!
+    playground:String!
+    caravan:String!
+    golf:String!
+    swimming_pool:String!
+    water:String!
+    wholesale:String!
+    viewpoint:String!
+    zoo:String!
+    gambling:String!
+    theatre:String!
+    fitness_station:String!
+    poi_type:String!
+
+}
+
+
+
+
+
+
+type Building {
+    id: ID!
+    phone: String!
+    addr_city: String!
+    addr_country: String!
+    addr_full: String!
+    addr_housenumber: String!
+    addr_housename: String!
+    addr_postcode: String!
+    addr_street: String!
+    addr_place: String!
+    email: String!
+    name: String!
+    opening_hours: String!
+    operator: String!
+    private_or_public: String! #ref tag
+    url: String!
+    website: String!
+    building: String!
+    amenity: String!
+    building_levels: String!
+    building_material: String!
+    building_min_level: String!
+    height: String!
+    landuse: String!
+    office: String!
+    shop: String!
+    source: String!
+    start_date: String!
+    wikipedia: String!
+    osmId: String!
+    timestamp: String!
+    version: Int!
+    geometry: String!
+    tags: String!
+    osm_type: String!
+    internet_access: String!
+    changeset: String!
+    craft:  String!
+
+}
+
+
+type Query {
+  dummy: String
+}
