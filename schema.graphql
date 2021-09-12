@@ -24,11 +24,11 @@ type Node {
 type Edge {
   # GraphQL id string
   id: ID!
-
+  # The length of a feature. https://wiki.openstreetmap.org/wiki/Key:length
   len: String!
-
+  # undocumented?
   v: String!
-
+  # udocumented? #
   u: String!
   # Geojson object in string format
   geometry: String!
@@ -42,51 +42,51 @@ type Edge {
   timestamp: String!
   # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted.
   osmId: String!
-
+  # The key width describes the actual width of a way or other feature. By default, values will be interpreted as metres. To reduce the risk of misunderstandings, or if the width should be specified in a different unit, the unit can be added to the end of the value, separated by a space (see #Examples). The value should always use the dot as decimal separator, if needed. 
   width: String!
-
+  # tunnel=* is used for roads, railway line, canals etc that run in a tunnel. 
   tunnel: String!
-
+  # The surface key is used to provide additional information about the physical surface of roads/footpaths and some other features, particularly regarding material composition and/or structure. Originally concerned about the surface in relation to transport and sports and more commonly used on linear features it is now increasingly used with certain areas of type natural=*. For broader descriptions of surfaces see Landcover. 
   surface: String!
-
+  # This key is used for designated combined cycle- and footways. If both have their own lane, tag segregated=yes. If they share one lane, tag segregated=no. This key has no default value and tagging it is useful in many cases! 
   segregated: String!
-
+  # The service tag provides additional information that depends on the context of a more "top level" tag on the same object. (service=* should not appear in isolation.) It is used to describe details about types of "service" roads, railways or waterways; or the service or services offered by a business. 
   service: String!
-
+  # PSV stands for Public Service Vehicles. Use this tag for roads or lanes which are designated to public vehicles. More specific tag may be needed if only some specific public vehicles are allowed. 
   psv: String!
-
+  # 
   overtaking: String!
-
+  # 
   oneway: String!
-
+  # 
   name: String!
-
+  # 
   motor_vehicle: String!
-
+  # 
   motorcar: String!
-
+  # 
   maxspeed: String!
-
+  # 
   lit: String!
-
+  # 
   lanes: Int!
-
+  # 
   int_ref: String!
-
+  # 
   highway: String!
-
+  # 
   footway: String!
-
+  # 
   foot: String!
-
+  # 
   cycleway: String!
-
+  # 
   bridge: String!
-
+  # 
   bicycle: String!
-
+  # 
   area: String!
-
+  # 
   access: String!
 }
 
@@ -160,103 +160,103 @@ type PointOfInterest {
   changeset: Int!
   # The key craft=* is used for a place producing or processing customized goods.
   craft: String!
-
+  # 
   lat: Float!
-
+  # 
   lon: Float!
-
+  # 
   atm: String!
-
+  # 
   bicycle_parking: String!
-
+  # 
   cafe: String!
-
+  # 
   childcare: String!
-
+  # 
   parking: String!
-
+  # 
   social_facility: String!
-
+  # 
   books: String!
-
+  # 
   butcher: String!
-
+  # 
   clothes: String!
-
+  # 
   erotic: String!
-
+  # 
   religion: String!
-
+  # 
   second_hand: String!
-
+  # 
   information: String!
-
+  # 
   tourism: String!
-
+  # 
   bicycle: String!
-
+  # 
   coffee: String!
-
+  # 
   collector: String!
-
+  # 
   dry_cleaning: String!
-
+  # 
   fuel: String!
-
+  # 
   furniture: String!
-
+  # 
   massage: String!
-
+  # 
   motorcycle: String!
-
+  # 
   music: String!
-
+  # 
   organic: String!
-
+  # 
   outdoor: String!
-
+  # 
   pet: String!
-
+  # 
   trade: String!
-
+  # 
   wine: String!
-
+  # 
   attraction: String!
-
+  # 
   museum: String!
-
+  # 
   bar: String!
-
+  # 
   car_wash: String!
-
+  # 
   drinking_water: String!
-
+  # 
   leisure: String!
-
+  # 
   outdoor_seating: String!
-
+  # 
   playground: String!
-
+  # 
   caravan: String!
-
+  # 
   golf: String!
-
+  # 
   swimming_pool: String!
-
+  # 
   water: String!
-
+  # 
   wholesale: String!
-
+  # 
   viewpoint: String!
-
+  # 
   zoo: String!
-
+  # 
   gambling: String!
-
+  # 
   theatre: String!
-
+  # 
   fitness_station: String!
-
+  # 
   poi_type: String!
 }
 
