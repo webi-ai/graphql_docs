@@ -92,57 +92,57 @@ type Edge {
 
 type PointOfInterest {
   id: ID!
-
+  # see osm wiki https://wiki.openstreetmap.org/wiki/Item:Q1044
   addr_full: String!
-
+  # The name of a city/village (locality), like used as a part of a postal address
   addr_city: String!
-
+  # The country code of the current address. Note that it can be derived in most cases from mapped boundaries of countries. Use the ISO 3166-1 alpha-2 two letter country code in upper case. Example: "GB" for the United Kingdom (not "UK"!), "DE" for Germany, "CH" for Switzerland, "AT" for Austria, "FR" for France, "IT" for Italy.
   addr_country: String!
-
+  # The house number (may contain non-digits). If a single entry has multiple house numbers, separate them by ",". e.g. "12b,12c". Only required key for an address (except when key:addr:housename is used), all others are optional.
   addr_housenumber: String!
-
+  # see osm wiki https://wiki.openstreetmap.org/wiki/Item:Q1047
   addr_housename: String!
-
+  # The postal code of the building/area.
   addr_postcode: String!
-
+  # The street name portion of an address
   addr_street: String!
-
+  # Used when addr:housenumber =* is not grouped per street and by other object, usually a settlement.
   addr_place: String!
-
+  # email address associated with building
   email: String!
-
+  # name of the building
   name: String!
-
+  # opening hours of operation if available
   opening_hours: String!
-
+  # The operator tag is used to name a company, corporation, person or any other entity who is directly in charge of the current operation of a map object.
   operator: String!
-
+  # phone=number where the number should be in international (ITU-T E.164) format  https://en.wikipedia.org/wiki/E.164
   phone: String!
-
+  # access to building is private or public
   private_or_public: String!
-
+  # url associated with building. interchangable with website according to osm wiki https://wiki.openstreetmap.org/wiki/Key:url
   url: String!
-
+  # The website=* tag can be used to provide the full URL to the official website for the related features, be it a building, park railway or anything else.
   website: String!
-
+  # The most basic use is building=yes, but the value may be used to classify the type of building. Note that it may be not the same as the building's current use (tagged using building:use=*). For example, a hospital building that is abandoned or repurposed to be a marketplace is still a building=hospital, and to mark active hospitals amenity=hospital is used.
   building: String!
-
+  # For describing useful and important facilities for visitors and residents. Facilities include for example toilets, telephones, banks, pharmacies, prisons and schools. https://wiki.openstreetmap.org/wiki/Key:amenity
   amenity: String!
-
+  # The building:levels tag is used for marking the number of above-ground levels of a building (building=*) or part of a building (building:part=*). The underground levels and the roof do not count as levels here. However, levels that are part-way underground do count (see example below). For the purposes of this tag, "ground level" is defined to be the lowest entrance to a building.
   building_levels: String!
-
+  # Mainly used to describe the primary use of land by humans. For general information on mapping/classifying land areas see Land use and areas of natural land. See Landcover for general information on tagging the physical appearance of land and Proposed features/landcover for a proposal to more clearly separate the concepts.
   landuse: String!
-
+  # An office is a place of business where administrative or professional work is carried out. See the page titled Office for an introduction on its usage. https://wiki.openstreetmap.org/wiki/Office
   office: String!
-
+  # Use shop=* to mark the location of a shop and the products that it sells.
   shop: String!
-
+  # The source=* tag can be used to indicate the source of some information (i.e. meta data) added to OpenStreetMap. This tag could be useful for verification and to assist future editors who may wish to understand the origins of the data they are modifying.
   source: String!
-
+  # start_date=* can be used to indicate the date the feature opened or construction of the feature finished (i.e. started to exist as feature).
   start_date: String!
-
+  # Use wikipedia=language:page title to provide a reference to an article in Wikipedia about the feature.
   wikipedia: String!
-
+  # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted.
   osmId: String!
   # W3C standard date and time formats. https://www.w3.org/TR/NOTE-datetime Time of the last modification (e.g. "2016-12-31T23:59:59.999Z").
   timestamp: String!
