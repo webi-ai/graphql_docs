@@ -54,39 +54,39 @@ type Edge {
   service: String!
   # PSV stands for Public Service Vehicles. Use this tag for roads or lanes which are designated to public vehicles. More specific tag may be needed if only some specific public vehicles are allowed. 
   psv: String!
-  # 
+  # Using the overtaking=* tag to specify the legal status of overtaking (also known as passing) on a section of road, which may either be indicated by markings on the road or by a traffic sign. Overtaking means to catch up with and move in front of another vehicle or person while traveling in the same direction. 
   overtaking: String!
-  # 
+  # The oneway tag is used to indicate the access restriction on highways and other linear features for vehicles as appropriate. This means that this tag should be used when this way can only be used in one direction by vehicles. Note that a no entry sign prohibiting entry from one side or across one point of the road, does not automatically imply that the entire road is oneway (look for oneway signs along the road). 
   oneway: String!
-  # 
+  # name of the edge location
   name: String!
-  # 
+  # Legal access restriction for all  motor vehicles (car, motorcycles, HGV, bus ...) 
   motor_vehicle: String!
-  # 
+  # Legal access permission for  cars (automobiles). This is normally derived from traffic signs placed along the road. However, the symbol depicting a (passenger) car on traffic signs has a very different legal meaning (scope) depending on the type of traffic sign it is depicted on. 
   motorcar: String!
-  # 
+  # The maxspeed=* tag is used on ways to define the maximum legal speed limit for general traffic on a particular road, railway or waterway. By default, values will be interpreted as kilometres per hour. If the speed limit should be specified in a different unit the unit can be added to the end of the value, separated by a space (see Examples). The tag is also used on nodes to specify maxspeed traffic signs. 
   maxspeed: String!
-  # 
+  # The key lit=* indicates the presence of lighting. 
   lit: String!
-  # 
+  # Use the lanes=* key to tag how many traffic lanes there are on a highway (described on this page) or other features like a piste or running track (described on the respective pages). To tag individual lanes of a road, see the article about the lanes suffix. Count excludes cycle lanes and motorcycle lanes that do not permit a motor vehicle. For tagging cycle lanes see cycleway=*. For tagging motorcycle lanes see motorcycle=* or lanes. 
   lanes: Int!
-  # 
+  # "int_ref" stands for "international reference" and is used for international reference numbers or codes. 
   int_ref: String!
-  # 
+  # The key highway=* is the main key used for identifying any kind of road, street or path. The value of the key helps indicate the importance of the highway within the road network as a whole. See the table below for an ordered list from most important (motorway) to least important (service). 
   highway: String!
-  # 
+  # The key footway=* refines the tag highway=footway for sidewalk (called pavements/footways in UK) mapping. 
   footway: String!
-  # 
+  # undocumented ?
   foot: String!
-  # 
+  # Add the cycleway=* tag to a highway=* to map cycling infrastructure that is an inherent part of the road. This specifically applies to cycle lanes which are always a part of the road, and often also applies to separated cycle tracks if they are running parallel and next to the road. 
   cycleway: String!
-  # 
+  # The key bridge=* is a property to describe that a way is on a bridge. It can be combined with several types of ways such as roads, railways, path canals, pipelines or similar. 
   bridge: String!
-  # 
+  # Legal restriction for cyclists. 
   bicycle: String!
-  # 
+  # The area=yes tag is required for some closed ways when used to define an Area (polygon); however, for closed ways with other tags there is an assumption that the way defines an area. In some circumstances a closed way may define both a closed polyline and also an area. 
   area: String!
-  # 
+  # Access values describe restrictions on the use of highways and other transportation routes (railways, waterways), as well as facilities such as buildings, building entrances, amenities and leisure entities. 
   access: String!
 }
 
