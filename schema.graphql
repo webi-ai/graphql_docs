@@ -226,37 +226,37 @@ type PointOfInterest {
   museum: String!
   # The tag amenity=bar is used to map a bar: a purpose-built commercial establishment that sells alcoholic drinks to be consumed on the premises. They are characterised by a noisy and vibrant atmosphere, similar to a party. They usually do not sell food to be eaten as a meal. The music is usually loud and you often have to stand. Sometimes it has a dancefloor, but it's not the main attraction. 
   bar: String!
-  # 
+  # A  car wash is a facility used to clean the exterior and, in some cases, the interior of motor vehicles. Car washes can be self-serve, fully automated, or full-service with attendants who wash the vehicle. There are also washing facilities for trucks, buses and trains. 
   car_wash: String!
-  # 
+  # Drinking water is a place where humans can obtain potable water for consumption. Typically, the water is used for only drinking. This includes the  drinking fountain or bubbler, water taps, water wells, springs and water points. 
   drinking_water: String!
-  # 
+  # The leisure key is for places people go in their spare time. See also sport=* and tourism=*. 
   leisure: String!
-  # 
+  # The tag leisure=outdoor_seating is used to map a seating area located outside, usually for the consumption of food and drink from neighbouring cafes and restaurants, often belonging to one or more of them, but not necessarily adjacent. 
   outdoor_seating: String!
-  # 
+  # Marks a children's playground, playpark, or play area. These are outdoor (sometimes indoor) areas specifically designed for children to play. Often they provide equipment such as swings, slides, climbing frames and roundabouts. They are often part of a larger park, but are also found in residential areas and schools. 
   playground: String!
-  # 
+  # The tag shop=caravan is used to map a business that primarily sells recreational vehicles such as towed caravans (a.k.a travel trailers, pop-tops, camper trailers, tent trailers, 5th wheelers etc); powered, self-propelled motorhomes (camper vans, expedition vehicles, truck trailers / slide-ons etc); & similar types of vehicle. 
   caravan: String!
-  # 
+  # A golf store also known as a Pro Shop is a shop that sells golf equipment. 
   golf: String!
-  # 
+  # A store that sells swimming pool equipment and supplies. 
   swimming_pool: String!
-  # 
+  # An establishment that exclusively, or primarily, sells drinking water. 
   water: String!
-  # 
+  # A  warehouse club or  cash and carry is a large store which sells items in bulk. Many warehouse clubs require a membership fee; membership=* may be used to indicate mandatory membership. 
   wholesale: String!
-  # 
+  # A place where tourists, visitors, hikers might like to visit and take photographs. A place, often high, with a good view of surrounding countryside or notable buildings. Sometimes called a vista point or scenic area/point, lookout or overlook. 
   viewpoint: String!
-  # 
+  # Zoo is a place that has confined animals on display for viewing by the public. In addition, a zoo may also include unusual specimens of plants. 
   zoo: String!
-  # 
+  # The tag amenity=gambling is used to map a place for gambling which is not a bookmaker, lottery shop, casino, or adult gaming centre (slots or pachinko): for example, a bingo hall. 
   gambling: String!
-  # 
+  # Used to tag a theatre where live performances occur, such as plays, musicals and formal concerts. 
   theatre: String!
-  # 
+  # A  fitness station, outdoor gym, Street Workout, Calisthenics Park or trim trail is an outdoor facility, a single or a collection of exercise equipment. This is typically operated by a local government and free to use for everyone. Often along a fitness route or inside a park. 
   fitness_station: String!
-  # 
+  # see osm wiki https://wiki.openstreetmap.org/wiki/Points_of_interest
   poi_type: String!
 }
 
