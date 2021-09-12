@@ -160,71 +160,71 @@ type PointOfInterest {
   changeset: Int!
   # The key craft=* is used for a place producing or processing customized goods.
   craft: String!
-  # 
+  # Latitude coordinate in degrees (North of equator is positive) using the standard WGS84 projection. Some applications may not accept latitudes above/below ±85 degrees for some projections.
   lat: Float!
-  # 
+  # Longitude coordinate in degrees (East of Greenwich is positive) using the standard WGS84 projection. Note that the geographic poles will be exactly at latitude ±90 degrees but in that case the longitude will be set to an arbitrary value within this range.
   lon: Float!
-  # 
+  # An automated teller machine (ATM), or automatic banking machine (ABM), or "cash machine", is a computerised telecommunications device that provides the clients of a financial institution with access to financial transactions in a public space without the need for a cashier, human clerk or bank teller. 
   atm: String!
-  # 
+  # The type of bicycle parking, always used together with amenity=bicycle_parking. 
   bicycle_parking: String!
-  # 
+  # Describes type of cafe tagged with tag amenity=cafe by additional tag cafe=*. 
   cafe: String!
-  # 
+  # This tag is used for places where children are looked after, including a nursery or daycare which takes care of small children who are too young for amenity=kindergarten or preschool, and after-school childcare facilities. 
   childcare: String!
-  # 
+  # The parking key can be used together with amenity=parking to specify the type of parking facility. 
   parking: String!
-  # 
+  # A social facility is any place where social services are conducted. 
   social_facility: String!
-  # 
+  # The tag books=* may be used in combination with shop=books, amenity=library or amenity=public_bookcase to give further information if only special kind of books are sold. You can use several values, separated by semicolons, if the shop sells different kinds of books. For most of the common bookshops this tag will not be needed. 
   books: String!
-  # 
+  # A butcher is a shop primarily selling meat or meat products. The shop may offer other farm produce/groceries or general convenience store items, but primarily sells meat. 
   butcher: String!
-  # 
+  # The clothes=* tag may be used in combination with shop=clothes to give further information on the kind of clothes sold. You can use several values, separated by semicolons, if the shop sells different kinds of clothes. 
   clothes: String!
-  # 
+  # Shop focused on selling erotic toys, -clothes or other erotic stuff. 
   erotic: String!
-  # 
+  # Shop focused on selling religious articles, church shop. See also religion=* 
   religion: String!
-  # 
+  # A shop buying and selling used clothes and other things. See also shop=pawnbroker 
   second_hand: String!
-  # 
+  # The tourism=information describes an information source for tourists, travellers and visitors. But it does not differ between diverse types of an information point. This key helps refine this tag a little bit more, so it should be easier to find the right information point on a map. 
   information: String!
-  # 
+  # Places and things of specific interest to tourists including places to see, places to stay, things and places providing information and support to tourists. Tourism features can often be represented using either a node or an area and can be combined with other tags. For example a building that is a museum could be tagged as building=yes and tourism=museum. 
   tourism: String!
-  # 
+  # Legal restriction for cyclists. 
   bicycle: String!
-  # 
+  # The property coffee=yes describes a business in which coffee is served. This may be e.g. a kiosk shop=kiosk or shop=coffee. The coffee can be offered in standing, sitting or to go. 
   coffee: String!
-  # 
+  # The collection times of a post box, recycling container or other fixed location drop-off facility. The syntax is the same as for opening hours, including the hyphen because there are post boxes which are emptied several (undefined) times or one (undefined) time in a certain time frame. 
   collector: String!
-  # 
+  # A shop or kiosk offering a clothes dry cleaning service. The actual cleaning may be done elsewhere. 
   dry_cleaning: String!
-  # 
+  # Keys beginning with the prefix fuel:*=* indicate which types of fuel are available at a amenity=fuel, railway=fuel, waterway=fuel, aeroway=fuel, or shop=fuel. The keys are also used on amenity=bbq and man_made=kiln to describe the fuels used with the installed infrastructure, or to clarify the type of fuel indicated by substance=fuel or content=fuel. 
   fuel: String!
-  # 
+  # The key furniture describes the kind of furniture sold in a shop. 
   furniture: String!
-  # 
+  # The key massage=* is used to denote a type of massage. See shop=massage . The shop=massage tag is used to tag massage shops. 
   massage: String!
-  # 
+  # A shop that sells motorcycles and/or related accessories, clothes, parts, and rental services. 
   motorcycle: String!
-  # 
+  # A shop that primarily sells recorded music (vinyl/CDs). Can be called a "record shop"/" record store". 
   music: String!
-  # 
+  # Shop focused on selling organic food. Alternatively you can use the more versatile organic=* in combination with a general shop=* key (In this case: shop=supermarket or shop=convenience). 
   organic: String!
-  # 
+  # Shop focused on selling camping, walking, climbing, and other outdoor sports equipment (GPSes, etc.) 
   outdoor: String!
-  # 
+  # A shop for pets, animals and toys or food for them. 
   pet: String!
-  # 
+  # Shop focused on selling one or more building supplies such as timber/wood, cement etc. See also shop=doityourself 
   trade: String!
-  # 
+  # This tag is deprecated. Please use shop=alcohol + drink:wine=yes instead 
   wine: String!
-  # 
+  # The attraction key covers all kinds of dedicated attractions, especially the features commonly found in theme parks, water parks, and zoos. 
   attraction: String!
-  # 
+  # A museum is an institution which normally has exhibitions on scientific, historical, cultural topics, etc. Typically open to the public as a tourist attraction, museums may be more heavily involved in acquisitions, conservation or research. 
   museum: String!
-  # 
+  # The tag amenity=bar is used to map a bar: a purpose-built commercial establishment that sells alcoholic drinks to be consumed on the premises. They are characterised by a noisy and vibrant atmosphere, similar to a party. They usually do not sell food to be eaten as a meal. The music is usually loud and you often have to stand. Sometimes it has a dancefloor, but it's not the main attraction. 
   bar: String!
   # 
   car_wash: String!
