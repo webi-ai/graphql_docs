@@ -1,354 +1,344 @@
-# A node is one of the core elements in the OpenStreetMap data model. It consists of a single point in space defined by its latitude, longitude and node id. 
+# A node is one of the core elements in the OpenStreetMap data model. It consists of a single point in space defined by its latitude, longitude and node id.
 type Node {
-    # GraphQL id string
-    id: ID!
-    # Geojson object in string format
-    geometry: String!
-    # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted. 
-    osmId: String!
-    # see OSM wiki https://wiki.openstreetmap.org/wiki/Changeset
-    changeset: Int!
-    # The edit version of the object. Newly created objects start at version 1 and the value is incremented by the server when a client uploads a new version of the object. The server will reject a new version of an object if the version sent by the client does not match the current version of the object in the database. 
-    version: Int!
-    # W3C standard date and time formats. https://www.w3.org/TR/NOTE-datetime Time of the last modification (e.g. "2016-12-31T23:59:59.999Z").  
-    timestamp: String!
-    # A set of key/value pairs, with unique key 
-    tags: String!
-    # Latitude coordinate in degrees (North of equator is positive) using the standard WGS84 projection. Some applications may not accept latitudes above/below ±85 degrees for some projections. 
-    lat: Float!
-    # Longitude coordinate in degrees (East of Greenwich is positive) using the standard WGS84 projection. Note that the geographic poles will be exactly at latitude ±90 degrees but in that case the longitude will be set to an arbitrary value within this range. 
-    lon: Float!
+  # GraphQL id string
+  id: ID!
+  # Geojson object in string format
+  geometry: String!
+  # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted.
+  osmId: String!
+  # see OSM wiki https://wiki.openstreetmap.org/wiki/Changeset
+  changeset: Int!
+  # The edit version of the object. Newly created objects start at version 1 and the value is incremented by the server when a client uploads a new version of the object. The server will reject a new version of an object if the version sent by the client does not match the current version of the object in the database.
+  version: Int!
+  # W3C standard date and time formats. https://www.w3.org/TR/NOTE-datetime Time of the last modification (e.g. "2016-12-31T23:59:59.999Z").
+  timestamp: String!
+  # A set of key/value pairs, with unique key
+  tags: String!
+  # Latitude coordinate in degrees (North of equator is positive) using the standard WGS84 projection. Some applications may not accept latitudes above/below ±85 degrees for some projections.
+  lat: Float!
+  # Longitude coordinate in degrees (East of Greenwich is positive) using the standard WGS84 projection. Note that the geographic poles will be exactly at latitude ±90 degrees but in that case the longitude will be set to an arbitrary value within this range.
+  lon: Float!
 }
 
-# In OSM notation this is a Relation. A relation is a group of elements. In more technical terms, it is one of the core data elements and consists of one or more tags and an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describes the part that a particular feature plays within a relation. https://wiki.openstreetmap.org/wiki/Relation 
+# In OSM notation this is a Relation. A relation is a group of elements. In more technical terms, it is one of the core data elements and consists of one or more tags and an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describes the part that a particular feature plays within a relation. https://wiki.openstreetmap.org/wiki/Relation
 type Edge {
-    # GraphQL id string
-    id: ID!
+  # GraphQL id string
+  id: ID!
 
-    len: String!
+  len: String!
 
-    v: String!
+  v: String!
 
-    u: String!
-    # Geojson object in string format
-    geometry: String!
+  u: String!
+  # Geojson object in string format
+  geometry: String!
+  # The key type is commonly used to set a relation's type. https://wiki.openstreetmap.org/wiki/Key:type
+  osm_type: String!
+  # A set of key/value pairs, with unique key
+  tags: String!
+  # The edit version of the object. Newly created objects start at version 1 and the value is incremented by the server when a client uploads a new version of the object. The server will reject a new version of an object if the version sent by the client does not match the current version of the object in the database.
+  version: Int!
+  # W3C standard date and time formats. https://www.w3.org/TR/NOTE-datetime Time of the last modification (e.g. "2016-12-31T23:59:59.999Z").
+  timestamp: String!
+  # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted.
+  osmId: String!
 
-    osm_type: String!
+  width: String!
 
-    tags: String!
+  tunnel: String!
 
-    version: Int!
+  surface: String!
 
-    timestamp: String!
-    # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted. 
-    osmId: String!
+  segregated: String!
 
-    width: String! 
+  service: String!
 
-    tunnel: String!
+  psv: String!
 
-    surface: String!
+  overtaking: String!
 
-    segregated: String!
+  oneway: String!
 
-    service: String!
+  name: String!
 
-    psv: String!
+  motor_vehicle: String!
 
-    overtaking: String!
+  motorcar: String!
 
-    oneway: String!
+  maxspeed: String!
 
-    name: String!
+  lit: String!
 
-    motor_vehicle: String!
+  lanes: Int!
 
-    motorcar: String!
+  int_ref: String!
 
-    maxspeed: String!
+  highway: String!
 
-    lit: String!
+  footway: String!
 
-    lanes: Int!
+  foot: String!
 
-    int_ref: String!
+  cycleway: String!
 
-    highway: String!
+  bridge: String!
 
-    footway: String!
+  bicycle: String!
 
-    foot: String!
+  area: String!
 
-    cycleway: String!
-
-    bridge: String!
-
-    bicycle: String!
-
-    area: String!
-
-    access: String!   
-
+  access: String!
 }
-
 
 type PointOfInterest {
- 
-    id: ID!
- 
-    addr_full: String!
- 
-    addr_city: String!
- 
-    addr_country: String!
- 
-    addr_housenumber: String!
- 
-    addr_housename: String!
- 
-    addr_postcode: String!
- 
-    addr_street: String!
- 
-    addr_place: String!
- 
-    email: String!
- 
-    name: String!
- 
-    opening_hours: String!
- 
-    operator: String!
- 
-    phone: String!
- 
-    private_or_public: String! 
- 
-    url: String!
- 
-    website: String!
- 
-    building: String!
- 
-    amenity: String!
- 
-    building_levels: String!
-  
-    landuse: String!
-  
-    office: String!
-  
-    shop: String!
-  
-    source: String!
-  
-    start_date: String!
-  
-    wikipedia: String!
-  
-    osmId: String!
-  
-    timestamp: String!
-  
-    version: Int!
-  
-    geometry: String!
-  
-    tags: String!
-  
-    osm_type: String!
-  
-    internet_access: String!
-  
-    changeset: Int!
-  
-    craft:  String!
-  
-    lat: Float!
-  
-    lon: Float!
-  
-    atm: String!
-  
-    bicycle_parking: String!
-  
-    cafe: String!
-  
-    childcare: String!
-  
-    parking: String!
-  
-    social_facility: String!
-  
-    books: String!
-  
-    butcher: String!
-  
-    clothes: String!
-  
-    erotic: String!
-  
-    religion: String!
-  
-    second_hand: String!
-  
-    information: String!
-  
-    tourism: String!
-  
-    bicycle: String!
-  
-    coffee:String!
-  
-    collector:String!
-  
-    dry_cleaning:String!
-  
-    fuel:String!
-  
-    furniture:String!
-  
-    massage:String!
-  
-    motorcycle:String!
-  
-    music:String!
-  
-    organic:String!
-  
-    outdoor:String!
-  
-    pet:String!
-  
-    trade:String!
-  
-    wine:String!
-  
-    attraction:String!
-  
-    museum:String!
-  
-    bar:String!
-  
-    car_wash:String!
-  
-    drinking_water:String!
-  
-    leisure:String!
-  
-    outdoor_seating:String!
-  
-    playground:String!
-  
-    caravan:String!
-  
-    golf:String!
-  
-    swimming_pool:String!
-  
-    water:String!
-  
-    wholesale:String!
-  
-    viewpoint:String!
-  
-    zoo:String!
-  
-    gambling:String!
-  
-    theatre:String!
-  
-    fitness_station:String!
-  
-    poi_type:String!
+  id: ID!
 
+  addr_full: String!
+
+  addr_city: String!
+
+  addr_country: String!
+
+  addr_housenumber: String!
+
+  addr_housename: String!
+
+  addr_postcode: String!
+
+  addr_street: String!
+
+  addr_place: String!
+
+  email: String!
+
+  name: String!
+
+  opening_hours: String!
+
+  operator: String!
+
+  phone: String!
+
+  private_or_public: String!
+
+  url: String!
+
+  website: String!
+
+  building: String!
+
+  amenity: String!
+
+  building_levels: String!
+
+  landuse: String!
+
+  office: String!
+
+  shop: String!
+
+  source: String!
+
+  start_date: String!
+
+  wikipedia: String!
+
+  osmId: String!
+  # W3C standard date and time formats. https://www.w3.org/TR/NOTE-datetime Time of the last modification (e.g. "2016-12-31T23:59:59.999Z").
+  timestamp: String!
+  # The edit version of the object. Newly created objects start at version 1 and the value is incremented by the server when a client uploads a new version of the object. The server will reject a new version of an object if the version sent by the client does not match the current version of the object in the database.
+  version: Int!
+  # Geojson object in string format
+  geometry: String!
+  # A set of key/value pairs, with unique key
+  tags: String!
+  # The key type is commonly used to set a relation's type. https://wiki.openstreetmap.org/wiki/Key:type
+  osm_type: String!
+  # This tag is for indication that a map entity such as a building, a shop, restaurant, etc. offers internet access to the public, either as a paid service or even for free.
+  internet_access: String!
+  # see OSM wiki https://wiki.openstreetmap.org/wiki/Changeset
+  changeset: Int!
+  # The key craft=* is used for a place producing or processing customized goods.
+  craft: String!
+
+  lat: Float!
+
+  lon: Float!
+
+  atm: String!
+
+  bicycle_parking: String!
+
+  cafe: String!
+
+  childcare: String!
+
+  parking: String!
+
+  social_facility: String!
+
+  books: String!
+
+  butcher: String!
+
+  clothes: String!
+
+  erotic: String!
+
+  religion: String!
+
+  second_hand: String!
+
+  information: String!
+
+  tourism: String!
+
+  bicycle: String!
+
+  coffee: String!
+
+  collector: String!
+
+  dry_cleaning: String!
+
+  fuel: String!
+
+  furniture: String!
+
+  massage: String!
+
+  motorcycle: String!
+
+  music: String!
+
+  organic: String!
+
+  outdoor: String!
+
+  pet: String!
+
+  trade: String!
+
+  wine: String!
+
+  attraction: String!
+
+  museum: String!
+
+  bar: String!
+
+  car_wash: String!
+
+  drinking_water: String!
+
+  leisure: String!
+
+  outdoor_seating: String!
+
+  playground: String!
+
+  caravan: String!
+
+  golf: String!
+
+  swimming_pool: String!
+
+  water: String!
+
+  wholesale: String!
+
+  viewpoint: String!
+
+  zoo: String!
+
+  gambling: String!
+
+  theatre: String!
+
+  fitness_station: String!
+
+  poi_type: String!
 }
 
-
-
-
-
-# The definition of "building" is not straightforward. The OpenStreetMap definition is quite wide and includes not only objects considered as buildings by strict definitions but also building=static_caravan, building=houseboat and may include at least some building=storage_tank. 
+# The definition of "building" is not straightforward. The OpenStreetMap definition is quite wide and includes not only objects considered as buildings by strict definitions but also building=static_caravan, building=houseboat and may include at least some building=storage_tank.
 type Building {
-    # GraphQL id string
-    id: ID!
-    # phone=number where the number should be in international (ITU-T E.164) format  https://en.wikipedia.org/wiki/E.164
-    phone: String!
-    # The name of a city/village (locality), like used as a part of a postal address
-    addr_city: String!
-    # The country code of the current address. Note that it can be derived in most cases from mapped boundaries of countries. Use the ISO 3166-1 alpha-2 two letter country code in upper case. Example: "GB" for the United Kingdom (not "UK"!), "DE" for Germany, "CH" for Switzerland, "AT" for Austria, "FR" for France, "IT" for Italy. 
-    addr_country: String!
-    # see osm wiki https://wiki.openstreetmap.org/wiki/Item:Q1044
-    addr_full: String!
-    # The house number (may contain non-digits). If a single entry has multiple house numbers, separate them by ",". e.g. "12b,12c". Only required key for an address (except when key:addr:housename is used), all others are optional.
-    addr_housenumber: String!
-    # see osm wiki https://wiki.openstreetmap.org/wiki/Item:Q1047
-    addr_housename: String!
-    # The postal code of the building/area. 
-    addr_postcode: String!
-    # The street name portion of an address
-    addr_street: String!
-    # Used when addr:housenumber =* is not grouped per street and by other object, usually a settlement. 
-    addr_place: String!
-    # email address associated with building
-    email: String!
-    # name of the building
-    name: String!
-    # opening hours of operation if available
-    opening_hours: String!
-    # The operator tag is used to name a company, corporation, person or any other entity who is directly in charge of the current operation of a map object. 
-    operator: String!
-    # access to building is private or public
-    private_or_public: String!
-    # url associated with building. interchangable with website according to osm wiki https://wiki.openstreetmap.org/wiki/Key:url
-    url: String!
-    # The website=* tag can be used to provide the full URL to the official website for the related features, be it a building, park railway or anything else. 
-    website: String!
-    # The most basic use is building=yes, but the value may be used to classify the type of building. Note that it may be not the same as the building's current use (tagged using building:use=*). For example, a hospital building that is abandoned or repurposed to be a marketplace is still a building=hospital, and to mark active hospitals amenity=hospital is used. 
-    building: String!
-    # For describing useful and important facilities for visitors and residents. Facilities include for example toilets, telephones, banks, pharmacies, prisons and schools. https://wiki.openstreetmap.org/wiki/Key:amenity
-    amenity: String!
-    # The building:levels tag is used for marking the number of above-ground levels of a building (building=*) or part of a building (building:part=*). The underground levels and the roof do not count as levels here. However, levels that are part-way underground do count (see example below). For the purposes of this tag, "ground level" is defined to be the lowest entrance to a building. 
-    building_levels: String!
-    # The key building:material=* is used to describe the outer surface material of building walls, also know as the facade or façade. 
-    building_material: String!
-    # For marking the number of levels of a building (building=*) or part of a building (building:part=yes) above ground level we use tag building:levels=*.  
-    building_min_level: String!
-    # The key height=* describes the actual height of a feature. 
-    height: String!
-    # Mainly used to describe the primary use of land by humans. For general information on mapping/classifying land areas see Land use and areas of natural land. See Landcover for general information on tagging the physical appearance of land and Proposed features/landcover for a proposal to more clearly separate the concepts. 
-    landuse: String!
-    # An office is a place of business where administrative or professional work is carried out. See the page titled Office for an introduction on its usage. https://wiki.openstreetmap.org/wiki/Office
-    office: String!
-    # Use shop=* to mark the location of a shop and the products that it sells. 
-    shop: String!
-    # The source=* tag can be used to indicate the source of some information (i.e. meta data) added to OpenStreetMap. This tag could be useful for verification and to assist future editors who may wish to understand the origins of the data they are modifying. 
-    source: String!
-    # start_date=* can be used to indicate the date the feature opened or construction of the feature finished (i.e. started to exist as feature). 
-    start_date: String!
-    # Use wikipedia=language:page title to provide a reference to an article in Wikipedia about the feature. 
-    wikipedia: String!
-    # the openstreetmaps id string
-    # Geojson object in string format
-    geometry: String!
-    # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted. 
-    osmId: String!
-    # see OSM wiki https://wiki.openstreetmap.org/wiki/Changeset
-    changeset: Int!
-    # The edit version of the object. Newly created objects start at version 1 and the value is incremented by the server when a client uploads a new version of the object. The server will reject a new version of an object if the version sent by the client does not match the current version of the object in the database. 
-    version: Int!
-    # W3C standard date and time formats. https://www.w3.org/TR/NOTE-datetime Time of the last modification (e.g. "2016-12-31T23:59:59.999Z").  
-    timestamp: String!
-    # A set of key/value pairs, with unique key 
-    tags: String!
-    # The key type is commonly used to set a relation's type. https://wiki.openstreetmap.org/wiki/Key:type
-    osm_type: String!
-    # This tag is for indication that a map entity such as a building, a shop, restaurant, etc. offers internet access to the public, either as a paid service or even for free. 
-    internet_access: String!
-    # The key craft=* is used for a place producing or processing customized goods. 
-    craft:  String!
+  # GraphQL id string
+  id: ID!
+  # phone=number where the number should be in international (ITU-T E.164) format  https://en.wikipedia.org/wiki/E.164
+  phone: String!
+  # The name of a city/village (locality), like used as a part of a postal address
+  addr_city: String!
+  # The country code of the current address. Note that it can be derived in most cases from mapped boundaries of countries. Use the ISO 3166-1 alpha-2 two letter country code in upper case. Example: "GB" for the United Kingdom (not "UK"!), "DE" for Germany, "CH" for Switzerland, "AT" for Austria, "FR" for France, "IT" for Italy.
+  addr_country: String!
+  # see osm wiki https://wiki.openstreetmap.org/wiki/Item:Q1044
+  addr_full: String!
+  # The house number (may contain non-digits). If a single entry has multiple house numbers, separate them by ",". e.g. "12b,12c". Only required key for an address (except when key:addr:housename is used), all others are optional.
+  addr_housenumber: String!
+  # see osm wiki https://wiki.openstreetmap.org/wiki/Item:Q1047
+  addr_housename: String!
+  # The postal code of the building/area.
+  addr_postcode: String!
+  # The street name portion of an address
+  addr_street: String!
+  # Used when addr:housenumber =* is not grouped per street and by other object, usually a settlement.
+  addr_place: String!
+  # email address associated with building
+  email: String!
+  # name of the building
+  name: String!
+  # opening hours of operation if available
+  opening_hours: String!
+  # The operator tag is used to name a company, corporation, person or any other entity who is directly in charge of the current operation of a map object.
+  operator: String!
+  # access to building is private or public
+  private_or_public: String!
+  # url associated with building. interchangable with website according to osm wiki https://wiki.openstreetmap.org/wiki/Key:url
+  url: String!
+  # The website=* tag can be used to provide the full URL to the official website for the related features, be it a building, park railway or anything else.
+  website: String!
+  # The most basic use is building=yes, but the value may be used to classify the type of building. Note that it may be not the same as the building's current use (tagged using building:use=*). For example, a hospital building that is abandoned or repurposed to be a marketplace is still a building=hospital, and to mark active hospitals amenity=hospital is used.
+  building: String!
+  # For describing useful and important facilities for visitors and residents. Facilities include for example toilets, telephones, banks, pharmacies, prisons and schools. https://wiki.openstreetmap.org/wiki/Key:amenity
+  amenity: String!
+  # The building:levels tag is used for marking the number of above-ground levels of a building (building=*) or part of a building (building:part=*). The underground levels and the roof do not count as levels here. However, levels that are part-way underground do count (see example below). For the purposes of this tag, "ground level" is defined to be the lowest entrance to a building.
+  building_levels: String!
+  # The key building:material=* is used to describe the outer surface material of building walls, also know as the facade or façade.
+  building_material: String!
+  # For marking the number of levels of a building (building=*) or part of a building (building:part=yes) above ground level we use tag building:levels=*.
+  building_min_level: String!
+  # The key height=* describes the actual height of a feature.
+  height: String!
+  # Mainly used to describe the primary use of land by humans. For general information on mapping/classifying land areas see Land use and areas of natural land. See Landcover for general information on tagging the physical appearance of land and Proposed features/landcover for a proposal to more clearly separate the concepts.
+  landuse: String!
+  # An office is a place of business where administrative or professional work is carried out. See the page titled Office for an introduction on its usage. https://wiki.openstreetmap.org/wiki/Office
+  office: String!
+  # Use shop=* to mark the location of a shop and the products that it sells.
+  shop: String!
+  # The source=* tag can be used to indicate the source of some information (i.e. meta data) added to OpenStreetMap. This tag could be useful for verification and to assist future editors who may wish to understand the origins of the data they are modifying.
+  source: String!
+  # start_date=* can be used to indicate the date the feature opened or construction of the feature finished (i.e. started to exist as feature).
+  start_date: String!
+  # Use wikipedia=language:page title to provide a reference to an article in Wikipedia about the feature.
+  wikipedia: String!
+  # Geojson object in string format
+  geometry: String!
+  # Node ids are unique between nodes. (However, a way or a relation can have the same id number as a node.) Editors may temporarily save node ids as negative to denote ids that haven't yet been saved to the server. Node ids on the server are persistent, meaning that the assigned id of an existing node will remain unchanged each time data are added or corrected. Deleted node ids must not be reused, unless a former node is now undeleted.
+  osmId: String!
+  # see OSM wiki https://wiki.openstreetmap.org/wiki/Changeset
+  changeset: Int!
+  # The edit version of the object. Newly created objects start at version 1 and the value is incremented by the server when a client uploads a new version of the object. The server will reject a new version of an object if the version sent by the client does not match the current version of the object in the database.
+  version: Int!
+  # W3C standard date and time formats. https://www.w3.org/TR/NOTE-datetime Time of the last modification (e.g. "2016-12-31T23:59:59.999Z").
+  timestamp: String!
+  # A set of key/value pairs, with unique key
+  tags: String!
+  # The key type is commonly used to set a relation's type. https://wiki.openstreetmap.org/wiki/Key:type
+  osm_type: String!
+  # This tag is for indication that a map entity such as a building, a shop, restaurant, etc. offers internet access to the public, either as a paid service or even for free.
+  internet_access: String!
+  # The key craft=* is used for a place producing or processing customized goods.
+  craft: String!
 }
-
 
 type Query {
   dummy: String
