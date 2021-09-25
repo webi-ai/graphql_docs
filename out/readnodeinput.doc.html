@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>String</title>
+    <title>ReadNodeInput</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -55,7 +55,7 @@
                 Int
             </a>
         </li>
-        <li class="slds-is-active" title="String">
+        <li  title="String">
             <a href="string.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 String
             </a>
@@ -180,7 +180,7 @@
                 ReadIntInput
             </a>
         </li>
-        <li  title="ReadNodeInput">
+        <li class="slds-is-active" title="ReadNodeInput">
             <a href="readnodeinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ReadNodeInput
             </a>
@@ -230,10 +230,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">SCALAR</p>
-        <h1 class="slds-text-heading--large">String</h1>
-        <div class="slds-text-body--regular"><p>The <code>String</code> scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.</p>
-</div>
+        <p class="slds-text-title--caps slds-text-color--weak">INPUT_OBJECT</p>
+        <h1 class="slds-text-heading--large">ReadNodeInput</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -244,7 +243,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">scalar</span> <span class="identifier">String</span></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">input</span> <span class="identifier">ReadNodeInput</span> {</li><li><span class="tab"><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="readidinput.doc.html">ReadIDInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">geometry</span>: <a class="support type" href="readstringinput.doc.html">ReadStringInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">osmId</span>: <a class="support type" href="readstringinput.doc.html">ReadStringInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">changeset</span>: <a class="support type" href="readintinput.doc.html">ReadIntInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">version</span>: <a class="support type" href="readintinput.doc.html">ReadIntInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">timestamp</span>: <a class="support type" href="readstringinput.doc.html">ReadStringInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">tags</span>: <a class="support type" href="readstringinput.doc.html">ReadStringInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">lat</span>: <a class="support type" href="readstringinput.doc.html">ReadStringInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">lon</span>: <a class="support type" href="readstringinput.doc.html">ReadStringInput</a></span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">and</span>: [<a class="support type" href="readnodeinput.doc.html">ReadNodeInput</a>!]</span></li></span></li><li><span class="tab"><li><span class="tab"><span class="meta">or</span>: [<a class="support type" href="readnodeinput.doc.html">ReadNodeInput</a>!]</span></li></span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -255,15 +254,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="building.doc.html" title="Building - The definition of &quot;building&quot; is not straightforward. The OpenStreetMap definition is quite wide and includes not only objects considered as buildings by strict definitions but also building=static_caravan, building=houseboat and may include at least some building=storage_tank.">Building<em>The definition of "building" is not straightforward. The OpenStreetMap definition is quite wide and includes not only objects considered as buildings by strict definitions but also building=static_caravan, building=houseboat and may include at least some building=storage_tank.</em></a><li><li><a href="edge.doc.html" title="Edge - In OSM notation this is a Relation. A relation is a group of elements. In more technical terms, it is one of the core data elements and consists of one or more tags and an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describes the part that a particular feature plays within a relation. https://wiki.openstreetmap.org/wiki/Relation">Edge<em>In OSM notation this is a Relation. A relation is a group of elements. In more technical terms, it is one of the core data elements and consists of one or more tags and an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describes the part that a particular feature plays within a relation. https://wiki.openstreetmap.org/wiki/Relation</em></a><li><li><a href="node.doc.html" title="Node - A node is one of the core elements in the OpenStreetMap data model. It consists of a single point in space defined by its latitude, longitude and node id.">Node<em>A node is one of the core elements in the OpenStreetMap data model. It consists of a single point in space defined by its latitude, longitude and node id.</em></a><li><li><a href="pointofinterest.doc.html" title="PointOfInterest - ">PointOfInterest<em></em></a><li><li><a href="readstringinput.doc.html" title="ReadStringInput - ">ReadStringInput<em></em></a><li><li><a href="directive.spec.html" title="__Directive - A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
-
-In some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.">__Directive<em>A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
-
-In some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.</em></a><li><li><a href="enumvalue.spec.html" title="__EnumValue - One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.">__EnumValue<em>One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.</em></a><li><li><a href="field.spec.html" title="__Field - Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.">__Field<em>Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.</em></a><li><li><a href="inputvalue.spec.html" title="__InputValue - Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.">__InputValue<em>Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.</em></a><li><li><a href="type.spec.html" title="__Type - The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.
-
-Depending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.">__Type<em>The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.
-
-Depending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name and description, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.</em></a><li></ul>
+        <ul class="require-by"><li><a href="readnodeinput.doc.html" title="ReadNodeInput - ">ReadNodeInput<em></em></a><li></ul>
     </div>
 </section>
 <footer>
