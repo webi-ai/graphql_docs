@@ -341,12 +341,42 @@ type Building {
 }
 
 input ReadIDInput {
-    eq: ID!
-    gt: ID!
-    gte: ID!
-    lt: ID!
-    contains: ID!
+    eq: ID
+    gt: ID
+    gte: ID
+    lt: ID
+    lte: ID
+    contains: ID
 }
+
+
+
+
+input ReadStringInput {
+    eq: String
+    gt: String
+    gte: String
+    lt: String
+    lte: String
+    contains: String
+    startsWith: String
+    endsWith: String
+}
+
+enum OrderDirection {
+    ASC
+    DESC
+}
+
+
+input ReadIntInput {
+    eq: Int
+    gt: Int
+    gte: Int
+    lt: Int
+    lte: Int
+}
+
 
 input OrderNodeInput {
     id: OrderDirection
@@ -524,33 +554,6 @@ input OrderEdgeInput {
     bicycle: OrderDirection
     area: OrderDirection
     access: OrderDirection
-}
-
-
-
-input ReadStringInput {
-    eq: String
-    gt: String
-    gte: String
-    lt: String
-    lte: String
-    contains: String
-    startsWith: String
-    endsWith: String
-}
-
-enum OrderDirection {
-    ASC
-    DESC
-}
-
-
-input ReadIntInput {
-    eq: Int!
-    gt: Int!
-    gte: Int!
-    lt: Int!
-    lte: Int!
 }
 
 input ReadNodeInput {
@@ -742,40 +745,38 @@ input ReadEdgeInput {
 
 
 type Query {
-  readNode(
-  search: ReadNodeInput
-  limit: Int!
-  offset: Int!
-  order: OrderNodeInput
-  ): [Node!]!
+    readNode(
+    search: ReadNodeInput
+    limit: Int
+    offset: Int
+    order: OrderNodeInput
+    ): [Node!]!
+
+}
+type Query {
+    readEdge(
+    search: ReadEdgeInput
+    limit: Int
+    offset: Int
+    order: OrderEdgeInput
+    ): [Edge!]!
+}
+
+type Query {
+    readPointOfInterest(
+    search: ReadPointOfInterestInput
+    limit: Int
+    offset: Int
+    order: OrderPointOfInterestInput
+    ): [PointOfInterest!]!
 
 }
 
 type Query {
-  readEdge(
-  search: ReadEdgeInput
-  limit: Int!
-  offset: Int!
-  order: OrderEdgeInput
-  ): [Edge!]!
-
-}
-
-type Query {
-  readPointOfInterest(
-  search: ReadPointOfInterestInput
-  limit: Int!
-  offset: Int!
-  order: OrderPointOfInterestInput
-  ): [PointOfInterest!]!
-}
-
-
-type Query {
-  readBuilding(
-  search: ReadBuildingInput
-  limit: Int!
-  offset: Int!
-  order: OrderBuildingInput
-  ): [Building!]!
+    readBuilding(
+    search: ReadBuildingInput
+    limit: Int
+    offset: Int
+    order: OrderBuildingInput
+    ): [Building!]!
 }
