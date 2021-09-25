@@ -340,6 +340,442 @@ type Building {
   craft: String!
 }
 
+input ReadIDInput {
+    eq: ID!
+    gt: ID!
+    gte: ID!
+    lt: ID!
+    contains: ID!
+}
+
+input OrderNodeInput {
+    id: OrderDirection
+    geometry: OrderDirection
+    osmId: OrderDirection
+    changeset: OrderDirection
+    version: OrderDirection
+    timestamp: OrderDirection
+    tags: OrderDirection
+    lat: OrderDirection
+    lon: OrderDirection
+}
+
+input OrderBuildingInput {
+    id: OrderDirection
+    phone: OrderDirection
+    addr_city: OrderDirection
+    addr_country: OrderDirection
+    addr_full: OrderDirection
+    addr_housenumber: OrderDirection
+    addr_housename: OrderDirection
+    addr_postcode: OrderDirection
+    addr_street: OrderDirection
+    addr_place: OrderDirection
+    email: OrderDirection
+    name: OrderDirection
+    opening_hours: OrderDirection
+    operator: OrderDirection
+    private_or_public: OrderDirection
+    url: OrderDirection
+    website: OrderDirection
+    building: OrderDirection
+    amenity: OrderDirection
+    building_levels: OrderDirection
+    building_material: OrderDirection
+    building_min_level: OrderDirection
+    height: OrderDirection
+    landuse: OrderDirection
+    office: OrderDirection
+    shop: OrderDirection
+    source: OrderDirection
+    start_date: OrderDirection
+    wikipedia: OrderDirection
+    osmId: OrderDirection
+    timestamp: OrderDirection
+    version: OrderDirection
+    geometry: OrderDirection
+    tags: OrderDirection
+    osm_type: OrderDirection
+    internet_access: OrderDirection
+    changeset: OrderDirection
+    craft: OrderDirection
+}
+
+
+input OrderPointOfInterestInput {
+    id: OrderDirection
+    addr_full: OrderDirection
+    addr_city: OrderDirection
+    addr_country: OrderDirection
+    addr_housenumber: OrderDirection
+    addr_housename: OrderDirection
+    addr_postcode: OrderDirection
+    addr_street: OrderDirection
+    addr_place: OrderDirection
+    email: OrderDirection
+    name: OrderDirection
+    opening_hours: OrderDirection
+    operator: OrderDirection
+    phone: OrderDirection
+    private_or_public: OrderDirection
+    url: OrderDirection
+    website: OrderDirection
+    building: OrderDirection
+    amenity: OrderDirection
+    building_levels: OrderDirection
+    landuse: OrderDirection
+    office: OrderDirection
+    shop: OrderDirection
+    source: OrderDirection
+    start_date: OrderDirection
+    wikipedia: OrderDirection
+    osmId: OrderDirection
+    timestamp: OrderDirection
+    version: OrderDirection
+    geometry: OrderDirection
+    tags: OrderDirection
+    osm_type: OrderDirection
+    internet_access: OrderDirection
+    changeset: OrderDirection
+    craft: OrderDirection
+    lat: OrderDirection
+    lon: OrderDirection
+    atm: OrderDirection
+    bicycle_parking: OrderDirection
+    cafe: OrderDirection
+    childcare: OrderDirection
+    parking: OrderDirection
+    social_facility: OrderDirection
+    books: OrderDirection
+    butcher: OrderDirection
+    clothes: OrderDirection
+    erotic: OrderDirection
+    religion: OrderDirection
+    second_hand: OrderDirection
+    information: OrderDirection
+    tourism: OrderDirection
+    bicycle: OrderDirection
+    coffee: OrderDirection
+    collector: OrderDirection
+    dry_cleaning: OrderDirection
+    fuel: OrderDirection
+    furniture: OrderDirection
+    massage: OrderDirection
+    motorcycle: OrderDirection
+    music: OrderDirection
+    organic: OrderDirection
+    outdoor: OrderDirection
+    pet: OrderDirection
+    trade: OrderDirection
+    wine: OrderDirection
+    attraction: OrderDirection
+    museum: OrderDirection
+    bar: OrderDirection
+    car_wash: OrderDirection
+    drinking_water: OrderDirection
+    leisure: OrderDirection
+    outdoor_seating: OrderDirection
+    playground: OrderDirection
+    caravan: OrderDirection
+    golf: OrderDirection
+    swimming_pool: OrderDirection
+    water: OrderDirection
+    wholesale: OrderDirection
+    viewpoint: OrderDirection
+    zoo: OrderDirection
+    gambling: OrderDirection
+    theatre: OrderDirection
+    fitness_station: OrderDirection
+    poi_type: OrderDirection
+}
+
+
+input OrderEdgeInput {
+    id: OrderDirection
+    len: OrderDirection
+    v: OrderDirection
+    u: OrderDirection
+    geometry: OrderDirection
+    osm_type: OrderDirection
+    tags: OrderDirection
+    version: OrderDirection
+    timestamp: OrderDirection
+    osmId: OrderDirection
+    width: OrderDirection
+    tunnel: OrderDirection
+    surface: OrderDirection
+    segregated: OrderDirection
+    service: OrderDirection
+    psv: OrderDirection
+    overtaking: OrderDirection
+    oneway: OrderDirection
+    name: OrderDirection
+    motor_vehicle: OrderDirection
+    motorcar: OrderDirection
+    maxspeed: OrderDirection
+    lit: OrderDirection
+    lanes: OrderDirection
+    int_ref: OrderDirection
+    highway: OrderDirection
+    footway: OrderDirection
+    foot: OrderDirection
+    cycleway: OrderDirection
+    bridge: OrderDirection
+    bicycle: OrderDirection
+    area: OrderDirection
+    access: OrderDirection
+}
+
+
+
+input ReadStringInput {
+    eq: String
+    gt: String
+    gte: String
+    lt: String
+    lte: String
+    contains: String
+    startsWith: String
+    endsWith: String
+}
+
+enum OrderDirection {
+    ASC
+    DESC
+}
+
+
+input ReadIntInput {
+    eq: Int!
+    gt: Int!
+    gte: Int!
+    lt: Int!
+    lte: Int!
+}
+
+input ReadNodeInput {
+    id: ReadIDInput
+    geometry: ReadStringInput
+    osmId: ReadStringInput
+    changeset: ReadIntInput
+    version: ReadIntInput
+    timestamp: ReadStringInput
+    tags: ReadStringInput
+    lat: ReadStringInput
+    lon: ReadStringInput
+    and: [ReadNodeInput!]
+    or: [ReadNodeInput!]
+}
+
+
+input ReadBuildingInput {
+    id: ReadIDInput
+    phone: ReadStringInput
+    addr_city: ReadStringInput
+    addr_country: ReadStringInput
+    addr_full: ReadStringInput
+    addr_housenumber: ReadStringInput
+    addr_housename: ReadStringInput
+    addr_postcode: ReadStringInput
+    addr_street: ReadStringInput
+    addr_place: ReadStringInput
+    email: ReadStringInput
+    name: ReadStringInput
+    opening_hours: ReadStringInput
+    operator: ReadStringInput
+    private_or_public: ReadStringInput
+    url: ReadStringInput
+    website: ReadStringInput
+    building: ReadStringInput
+    amenity: ReadStringInput
+    building_levels: ReadStringInput
+    building_material: ReadStringInput
+    building_min_level: ReadStringInput
+    height: ReadStringInput
+    landuse: ReadStringInput
+    office: ReadStringInput
+    shop: ReadStringInput
+    source: ReadStringInput
+    start_date: ReadStringInput
+    wikipedia: ReadStringInput
+    osmId: ReadStringInput
+    timestamp: ReadStringInput
+    version: ReadIntInput
+    geometry: ReadStringInput
+    tags: ReadStringInput
+    osm_type: ReadStringInput
+    internet_access: ReadStringInput
+    changeset: ReadStringInput
+    craft: ReadStringInput
+    and: [ReadBuildingInput!]
+    or: [ReadBuildingInput!]
+}
+
+
+
+input ReadPointOfInterestInput {
+    id: ReadIDInput
+    addr_full: ReadStringInput
+    addr_city: ReadStringInput
+    addr_country: ReadStringInput
+    addr_housenumber: ReadStringInput
+    addr_housename: ReadStringInput
+    addr_postcode: ReadStringInput
+    addr_street: ReadStringInput
+    addr_place: ReadStringInput
+    email: ReadStringInput
+    name: ReadStringInput
+    opening_hours: ReadStringInput
+    operator: ReadStringInput
+    phone: ReadStringInput
+    private_or_public: ReadStringInput
+    url: ReadStringInput
+    website: ReadStringInput
+    building: ReadStringInput
+    amenity: ReadStringInput
+    building_levels: ReadStringInput
+    landuse: ReadStringInput
+    office: ReadStringInput
+    shop: ReadStringInput
+    source: ReadStringInput
+    start_date: ReadStringInput
+    wikipedia: ReadStringInput
+    osmId: ReadStringInput
+    timestamp: ReadStringInput
+    version: ReadIntInput
+    geometry: ReadStringInput
+    tags: ReadStringInput
+    osm_type: ReadStringInput
+    internet_access: ReadStringInput
+    changeset: ReadIntInput
+    craft: ReadStringInput
+    lat: ReadStringInput
+    lon: ReadStringInput
+    atm: ReadStringInput
+    bicycle_parking: ReadStringInput
+    cafe: ReadStringInput
+    childcare: ReadStringInput
+    parking: ReadStringInput
+    social_facility: ReadStringInput
+    books: ReadStringInput
+    butcher: ReadStringInput
+    clothes: ReadStringInput
+    erotic: ReadStringInput
+    religion: ReadStringInput
+    second_hand: ReadStringInput
+    information: ReadStringInput
+    tourism: ReadStringInput
+    bicycle: ReadStringInput
+    coffee: ReadStringInput
+    collector: ReadStringInput
+    dry_cleaning: ReadStringInput
+    fuel: ReadStringInput
+    furniture: ReadStringInput
+    massage: ReadStringInput
+    motorcycle: ReadStringInput
+    music: ReadStringInput
+    organic: ReadStringInput
+    outdoor: ReadStringInput
+    pet: ReadStringInput
+    trade: ReadStringInput
+    wine: ReadStringInput
+    attraction: ReadStringInput
+    museum: ReadStringInput
+    bar: ReadStringInput
+    car_wash: ReadStringInput
+    drinking_water: ReadStringInput
+    leisure: ReadStringInput
+    outdoor_seating: ReadStringInput
+    playground: ReadStringInput
+    caravan: ReadStringInput
+    golf: ReadStringInput
+    swimming_pool: ReadStringInput
+    water: ReadStringInput
+    wholesale: ReadStringInput
+    viewpoint: ReadStringInput
+    zoo: ReadStringInput
+    gambling: ReadStringInput
+    theatre: ReadStringInput
+    fitness_station: ReadStringInput
+    poi_type: ReadStringInput
+    and: [ReadPointOfInterestInput!]
+    or: [ReadPointOfInterestInput!]
+}
+
+input ReadEdgeInput {
+    id: ReadIDInput
+    len: ReadStringInput
+    v: ReadStringInput
+    u: ReadStringInput
+    geometry: ReadStringInput
+    osm_type: ReadStringInput
+    tags: ReadStringInput
+    version: ReadIntInput
+    timestamp: ReadStringInput
+    osmId: ReadStringInput
+    width: ReadStringInput
+    tunnel: ReadStringInput
+    surface: ReadStringInput
+    segregated: ReadStringInput
+    service: ReadStringInput
+    psv: ReadStringInput
+    overtaking: ReadStringInput
+    oneway: ReadStringInput
+    name: ReadStringInput
+    motor_vehicle: ReadStringInput
+    motorcar: ReadStringInput
+    maxspeed: ReadStringInput
+    lit: ReadStringInput
+    lanes: ReadIntInput
+    int_ref: ReadStringInput
+    highway: ReadStringInput
+    footway: ReadStringInput
+    foot: ReadStringInput
+    cycleway: ReadStringInput
+    bridge: ReadStringInput
+    bicycle: ReadStringInput
+    area: ReadStringInput
+    access: ReadStringInput
+    and: [ReadEdgeInput!]
+    or: [ReadEdgeInput!]
+}
+
+
 type Query {
-  dummy: String
+readNode(
+search: ReadNodeInput
+limit: Int!
+offset: Int!
+order: OrderNodeInput
+): [Node!]!
+
+}
+
+type Query {
+readEdge(
+search: ReadEdgeInput
+limit: Int!
+offset: Int!
+order: OrderEdgeInput
+): [Edge!]!
+
+}
+
+type Query {
+readPointOfInterest(
+search: ReadPointOfInterestInput
+limit: Int!
+offset: Int!
+order: OrderPointOfInterestInput
+): [PointOfInterest!]!
+}
+
+
+type Query {
+readBuilding(
+search: ReadBuildingInput
+limit: Int!
+offset: Int!
+order: OrderBuildingInput
+): [Building!]!
 }
