@@ -15,9 +15,9 @@ type Node {
   # A set of key/value pairs, with unique key
   tags: String!
   # Latitude coordinate in degrees (North of equator is positive) using the standard WGS84 projection. Some applications may not accept latitudes above/below ±85 degrees for some projections.
-  lat: Float!
+  lat: String!
   # Longitude coordinate in degrees (East of Greenwich is positive) using the standard WGS84 projection. Note that the geographic poles will be exactly at latitude ±90 degrees but in that case the longitude will be set to an arbitrary value within this range.
-  lon: Float!
+  lon: String!
 }
 
 # In OSM notation this is a Relation. A relation is a group of elements. In more technical terms, it is one of the core data elements and consists of one or more tags and an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describes the part that a particular feature plays within a relation. https://wiki.openstreetmap.org/wiki/Relation
@@ -161,9 +161,9 @@ type PointOfInterest {
   # The key craft=* is used for a place producing or processing customized goods.
   craft: String!
   # Latitude coordinate in degrees (North of equator is positive) using the standard WGS84 projection. Some applications may not accept latitudes above/below ±85 degrees for some projections.
-  lat: Float!
+  lat: String!
   # Longitude coordinate in degrees (East of Greenwich is positive) using the standard WGS84 projection. Note that the geographic poles will be exactly at latitude ±90 degrees but in that case the longitude will be set to an arbitrary value within this range.
-  lon: Float!
+  lon: String!
   # An automated teller machine (ATM), or automatic banking machine (ABM), or "cash machine", is a computerised telecommunications device that provides the clients of a financial institution with access to financial transactions in a public space without the need for a cashier, human clerk or bank teller. 
   atm: String!
   # The type of bicycle parking, always used together with amenity=bicycle_parking. 
