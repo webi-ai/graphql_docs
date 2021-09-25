@@ -180,11 +180,37 @@
 
 /**
  * @typedef {Object} ReadIDInput
- * @property {string} eq
- * @property {string} gt
- * @property {string} gte
- * @property {string} lt
- * @property {string} contains
+ * @property {string} [eq]
+ * @property {string} [gt]
+ * @property {string} [gte]
+ * @property {string} [lt]
+ * @property {string} [lte]
+ * @property {string} [contains]
+ */
+
+/**
+ * @typedef {Object} ReadStringInput
+ * @property {string} [eq]
+ * @property {string} [gt]
+ * @property {string} [gte]
+ * @property {string} [lt]
+ * @property {string} [lte]
+ * @property {string} [contains]
+ * @property {string} [startsWith]
+ * @property {string} [endsWith]
+ */
+
+/**
+ * @typedef {("ASC"|"DESC")} OrderDirection
+ */
+
+/**
+ * @typedef {Object} ReadIntInput
+ * @property {number} [eq]
+ * @property {number} [gt]
+ * @property {number} [gte]
+ * @property {number} [lt]
+ * @property {number} [lte]
  */
 
 /**
@@ -365,31 +391,6 @@
  * @property {OrderDirection} [bicycle]
  * @property {OrderDirection} [area]
  * @property {OrderDirection} [access]
- */
-
-/**
- * @typedef {Object} ReadStringInput
- * @property {string} [eq]
- * @property {string} [gt]
- * @property {string} [gte]
- * @property {string} [lt]
- * @property {string} [lte]
- * @property {string} [contains]
- * @property {string} [startsWith]
- * @property {string} [endsWith]
- */
-
-/**
- * @typedef {("ASC"|"DESC")} OrderDirection
- */
-
-/**
- * @typedef {Object} ReadIntInput
- * @property {number} eq
- * @property {number} gt
- * @property {number} gte
- * @property {number} lt
- * @property {number} lte
  */
 
 /**
