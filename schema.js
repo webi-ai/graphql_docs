@@ -7,8 +7,8 @@
  * @property {number} version
  * @property {string} timestamp
  * @property {string} tags
- * @property {number} lat
- * @property {number} lon
+ * @property {string} lat
+ * @property {string} lon
  */
 
 /**
@@ -85,8 +85,8 @@
  * @property {string} internet_access
  * @property {number} changeset
  * @property {string} craft
- * @property {number} lat
- * @property {number} lon
+ * @property {string} lat
+ * @property {string} lon
  * @property {string} atm
  * @property {string} bicycle_parking
  * @property {string} cafe
