@@ -752,16 +752,12 @@ type Query {
     order: OrderNodeInput
     ): [Node!]!
 
-
-
     readEdge(
     search: ReadEdgeInput
     limit: Int
     offset: Int
     order: OrderEdgeInput
     ): [Edge!]!
-
-
 
     readPointOfInterest(
     search: ReadPointOfInterestInput
