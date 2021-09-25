@@ -752,17 +752,17 @@ type Query {
     order: OrderNodeInput
     ): [Node!]!
 
-}
-type Query {
+
+
     readEdge(
     search: ReadEdgeInput
     limit: Int
     offset: Int
     order: OrderEdgeInput
     ): [Edge!]!
-}
 
-type Query {
+
+
     readPointOfInterest(
     search: ReadPointOfInterestInput
     limit: Int
@@ -770,9 +770,6 @@ type Query {
     order: OrderPointOfInterestInput
     ): [PointOfInterest!]!
 
-}
-
-type Query {
     readBuilding(
     search: ReadBuildingInput
     limit: Int
