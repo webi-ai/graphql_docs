@@ -742,40 +742,40 @@ input ReadEdgeInput {
 
 
 type Query {
-readNode(
-search: ReadNodeInput
-limit: Int!
-offset: Int!
-order: OrderNodeInput
-): [Node!]!
+  readNode(
+  search: ReadNodeInput
+  limit: Int!
+  offset: Int!
+  order: OrderNodeInput
+  ): [Node!]!
 
 }
 
 type Query {
-readEdge(
-search: ReadEdgeInput
-limit: Int!
-offset: Int!
-order: OrderEdgeInput
-): [Edge!]!
+  readEdge(
+  search: ReadEdgeInput
+  limit: Int!
+  offset: Int!
+  order: OrderEdgeInput
+  ): [Edge!]!
 
 }
 
 type Query {
-readPointOfInterest(
-search: ReadPointOfInterestInput
-limit: Int!
-offset: Int!
-order: OrderPointOfInterestInput
-): [PointOfInterest!]!
+  readPointOfInterest(
+  search: ReadPointOfInterestInput
+  limit: Int!
+  offset: Int!
+  order: OrderPointOfInterestInput
+  ): [PointOfInterest!]!
 }
 
 
 type Query {
-readBuilding(
-search: ReadBuildingInput
-limit: Int!
-offset: Int!
-order: OrderBuildingInput
-): [Building!]!
+  readBuilding(
+  search: ReadBuildingInput
+  limit: Int!
+  offset: Int!
+  order: OrderBuildingInput
+  ): [Building!]!
 }
