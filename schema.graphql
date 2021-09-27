@@ -258,6 +258,42 @@ type PointOfInterest {
   fitness_station: String!
   # see osm wiki https://wiki.openstreetmap.org/wiki/Points_of_interest
   poi_type: String!
+  cheese: String!
+  tobacco: String!
+  post_office: String!
+  tattoo: String!
+  lottery: String!
+  fireplace: String!
+  picnic_table: String!
+  school: String!
+  stationery: String!
+  butcher: String!
+  jewelry: String!
+  pastry: String!
+  ice_cream: String!
+  artwork: String!
+  alcohol: String!
+  sauna: String!
+  medical_supply: String!
+  restaurant: String!
+  social_centre: String!
+  park: String!
+  biergarten: String!
+  lighting: String!
+  boat: String!
+  seafood: String!
+  deli: String!
+  mobile_phone: String!
+  fast_food: String!
+  hairdresser: String!
+  shoes: String!
+  guest_house: String!
+  video: String!
+  fountain: String!
+  bakery: String!
+  bbq: String!
+  fitness_centre: String!
+  car: String!
 }
 
 # The definition of "building" is not straightforward. The OpenStreetMap definition is quite wide and includes not only objects considered as buildings by strict definitions but also building=static_caravan, building=houseboat and may include at least some building=storage_tank.
@@ -517,6 +553,42 @@ input OrderPointOfInterestInput {
     theatre: OrderDirection
     fitness_station: OrderDirection
     poi_type: OrderDirection
+    cheese: OrderDirection
+    tobacco: OrderDirection
+    post_office: OrderDirection
+    tattoo: OrderDirection
+    lottery: OrderDirection
+    fireplace: OrderDirection
+    picnic_table: OrderDirection
+    school: OrderDirection
+    stationery: OrderDirection
+    butcher: OrderDirection
+    jewelry: OrderDirection
+    pastry: OrderDirection
+    ice_cream: OrderDirection
+    artwork: OrderDirection
+    alcohol: OrderDirection
+    sauna: OrderDirection
+    medical_supply: OrderDirection
+    restaurant: OrderDirection
+    social_centre: OrderDirection
+    park: OrderDirection
+    biergarten: OrderDirection
+    lighting: OrderDirection
+    boat: OrderDirection
+    seafood: OrderDirection
+    deli: OrderDirection
+    mobile_phone: OrderDirection
+    fast_food: OrderDirection
+    hairdresser: OrderDirection
+    shoes: OrderDirection
+    guest_house: OrderDirection
+    video: OrderDirection
+    fountain: OrderDirection
+    bakery: OrderDirection
+    bbq: OrderDirection
+    fitness_centre: OrderDirection
+    car: OrderDirection
 }
 
 
@@ -701,6 +773,42 @@ input ReadPointOfInterestInput {
     theatre: ReadStringInput
     fitness_station: ReadStringInput
     poi_type: ReadStringInput
+    cheese: ReadStringInput
+    tobacco: ReadStringInput
+    post_office: ReadStringInput
+    tattoo: ReadStringInput
+    lottery: ReadStringInput
+    fireplace: ReadStringInput
+    picnic_table: ReadStringInput
+    school: ReadStringInput
+    stationery: ReadStringInput
+    butcher: ReadStringInput
+    jewelry: ReadStringInput
+    pastry: ReadStringInput
+    ice_cream: ReadStringInput
+    artwork: ReadStringInput
+    alcohol: ReadStringInput
+    sauna: ReadStringInput
+    medical_supply: ReadStringInput
+    restaurant: ReadStringInput
+    social_centre: ReadStringInput
+    park: ReadStringInput
+    biergarten: ReadStringInput
+    lighting: ReadStringInput
+    boat: ReadStringInput
+    seafood: ReadStringInput
+    deli: ReadStringInput
+    mobile_phone: ReadStringInput
+    fast_food: ReadStringInput
+    hairdresser: ReadStringInput
+    shoes: ReadStringInput
+    guest_house: ReadStringInput
+    video: ReadStringInput
+    fountain: ReadStringInput
+    bakery: ReadStringInput
+    bbq: ReadStringInput
+    fitness_centre: ReadStringInput
+    car: ReadStringInput
     and: [ReadPointOfInterestInput!]
     or: [ReadPointOfInterestInput!]
 }
