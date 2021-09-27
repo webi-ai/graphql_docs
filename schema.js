@@ -134,6 +134,41 @@
  * @property {string} theatre
  * @property {string} fitness_station
  * @property {string} poi_type
+ * @property {string} cheese
+ * @property {string} tobacco
+ * @property {string} post_office
+ * @property {string} tattoo
+ * @property {string} lottery
+ * @property {string} fireplace
+ * @property {string} picnic_table
+ * @property {string} school
+ * @property {string} stationery
+ * @property {string} jewelry
+ * @property {string} pastry
+ * @property {string} ice_cream
+ * @property {string} artwork
+ * @property {string} alcohol
+ * @property {string} sauna
+ * @property {string} medical_supply
+ * @property {string} restaurant
+ * @property {string} social_centre
+ * @property {string} park
+ * @property {string} biergarten
+ * @property {string} lighting
+ * @property {string} boat
+ * @property {string} seafood
+ * @property {string} deli
+ * @property {string} mobile_phone
+ * @property {string} fast_food
+ * @property {string} hairdresser
+ * @property {string} shoes
+ * @property {string} guest_house
+ * @property {string} video
+ * @property {string} fountain
+ * @property {string} bakery
+ * @property {string} bbq
+ * @property {string} fitness_centre
+ * @property {string} car
  */
 
 /**
@@ -354,6 +389,41 @@
  * @property {OrderDirection} [theatre]
  * @property {OrderDirection} [fitness_station]
  * @property {OrderDirection} [poi_type]
+ * @property {OrderDirection} [cheese]
+ * @property {OrderDirection} [tobacco]
+ * @property {OrderDirection} [post_office]
+ * @property {OrderDirection} [tattoo]
+ * @property {OrderDirection} [lottery]
+ * @property {OrderDirection} [fireplace]
+ * @property {OrderDirection} [picnic_table]
+ * @property {OrderDirection} [school]
+ * @property {OrderDirection} [stationery]
+ * @property {OrderDirection} [jewelry]
+ * @property {OrderDirection} [pastry]
+ * @property {OrderDirection} [ice_cream]
+ * @property {OrderDirection} [artwork]
+ * @property {OrderDirection} [alcohol]
+ * @property {OrderDirection} [sauna]
+ * @property {OrderDirection} [medical_supply]
+ * @property {OrderDirection} [restaurant]
+ * @property {OrderDirection} [social_centre]
+ * @property {OrderDirection} [park]
+ * @property {OrderDirection} [biergarten]
+ * @property {OrderDirection} [lighting]
+ * @property {OrderDirection} [boat]
+ * @property {OrderDirection} [seafood]
+ * @property {OrderDirection} [deli]
+ * @property {OrderDirection} [mobile_phone]
+ * @property {OrderDirection} [fast_food]
+ * @property {OrderDirection} [hairdresser]
+ * @property {OrderDirection} [shoes]
+ * @property {OrderDirection} [guest_house]
+ * @property {OrderDirection} [video]
+ * @property {OrderDirection} [fountain]
+ * @property {OrderDirection} [bakery]
+ * @property {OrderDirection} [bbq]
+ * @property {OrderDirection} [fitness_centre]
+ * @property {OrderDirection} [car]
  */
 
 /**
@@ -538,6 +608,41 @@
  * @property {ReadStringInput} [theatre]
  * @property {ReadStringInput} [fitness_station]
  * @property {ReadStringInput} [poi_type]
+ * @property {ReadStringInput} [cheese]
+ * @property {ReadStringInput} [tobacco]
+ * @property {ReadStringInput} [post_office]
+ * @property {ReadStringInput} [tattoo]
+ * @property {ReadStringInput} [lottery]
+ * @property {ReadStringInput} [fireplace]
+ * @property {ReadStringInput} [picnic_table]
+ * @property {ReadStringInput} [school]
+ * @property {ReadStringInput} [stationery]
+ * @property {ReadStringInput} [jewelry]
+ * @property {ReadStringInput} [pastry]
+ * @property {ReadStringInput} [ice_cream]
+ * @property {ReadStringInput} [artwork]
+ * @property {ReadStringInput} [alcohol]
+ * @property {ReadStringInput} [sauna]
+ * @property {ReadStringInput} [medical_supply]
+ * @property {ReadStringInput} [restaurant]
+ * @property {ReadStringInput} [social_centre]
+ * @property {ReadStringInput} [park]
+ * @property {ReadStringInput} [biergarten]
+ * @property {ReadStringInput} [lighting]
+ * @property {ReadStringInput} [boat]
+ * @property {ReadStringInput} [seafood]
+ * @property {ReadStringInput} [deli]
+ * @property {ReadStringInput} [mobile_phone]
+ * @property {ReadStringInput} [fast_food]
+ * @property {ReadStringInput} [hairdresser]
+ * @property {ReadStringInput} [shoes]
+ * @property {ReadStringInput} [guest_house]
+ * @property {ReadStringInput} [video]
+ * @property {ReadStringInput} [fountain]
+ * @property {ReadStringInput} [bakery]
+ * @property {ReadStringInput} [bbq]
+ * @property {ReadStringInput} [fitness_centre]
+ * @property {ReadStringInput} [car]
  * @property {Array<ReadPointOfInterestInput>} [and]
  * @property {Array<ReadPointOfInterestInput>} [or]
  */

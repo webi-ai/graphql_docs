@@ -258,41 +258,77 @@ type PointOfInterest {
   fitness_station: String!
   # see osm wiki https://wiki.openstreetmap.org/wiki/Points_of_interest
   poi_type: String!
+  # A shop mainly selling cheese.
   cheese: String!
+  # A store that sells tobacco and smoking accessories. It might also sell other convenience items, such as magazines, newspapers, sweets and stamps.
   tobacco: String!
+  # A post office. A place where letters and parcels may be sent or collected.
   post_office: String!
+  # A place where people can get permanent tattoos
   tattoo: String!
+  # A shop of which the main or only purpose is the sale of lottery tickets.
   lottery: String!
+  # A shop selling fireplaces.
   fireplace: String!
+  # A table with benches for food and rest
   picnic_table: String!
+  # Education features are map objects and object features which relate to educational activities. Click through to the value page (e.g. amenity=school) for additional tags to use and related features to map.
   school: String!
+  # A shop selling office supplies
   stationery: String!
+  # A shop selling meat or meat products.
   butcher: String!
+  # A shop that sells rings, necklaces, earrings, watches, etc
   jewelry: String!
+  # A shop where sweet bakery products are produced and sold.
   pastry: String!
+  # A place that sells ice cream and/or frozen yoghurt over the counter.
   ice_cream: String!
+  # A public piece of art.
   artwork: String!
+  # A shop selling alcoholic drinks.
   alcohol: String!
+  # A  sauna is a small room or house designed as a place to experience dry or wet heat sessions, or an establishment with one or more of these and auxiliary facilities.
   sauna: String!
+  # A store where you can buy medical equipment for private persons
   medical_supply: String!
+  # A restaurant sells full sit-down meals with servers, and may sell alcohol.
   restaurant: String!
+  # A centre of fraternities, sororities, professional societies, union halls and other nonprofit organization.
   social_centre: String!
+  # A park is an area of open space for recreational use, usually designed and in semi-natural state with grassy areas, trees and bushes. Parks are usually urban, but not always; there are some rural parks 
   park: String!
+  # An open-air area where beer is served and you are allowed to bring your own food.
   biergarten: String!
+  # Indicates whether a feature is lit.
   lighting: String!
+  # A boat shop, may also offer further services
   boat: String!
+  # A shop selling fish/seafood.
   seafood: String!
+  # A shop selling  delicatessen (fine foods), e.g. cured meat and fish, expensive cheeses and spreads, caviar, nut and olive oils, or luxury confectionery. May also sell fine wine.
   deli: String!
+  # A shop that primarily sells mobile phones and accessories.
   mobile_phone: String!
+  # A place concentrating on very fast counter-only service and take-away food.
   fast_food: String!
+  # A hairdressers or barbers shop, where hair is cut
   hairdresser: String!
+  # A shoe shop or  shoe store is a type of retailer that specialises in selling shoes.
   shoes: String!
+  # Accommodation smaller than a hotel and typically owner-operated, usually offers a room and breakfast with staff not available 24/7, ranging from purpose-built guest houses to family-based Bed&Breakfast. In some countries these accomodations are not required to have a hotel license.
   guest_house: String!
+  # A shop that sells or rents out videos/DVDs
   video: String!
+  # A fountain with cultural, decorational or historical significance or which serves a recreational purpose.
   fountain: String!
+  # A bakery is a shop selling bread.
   bakery: String!
+  # A permanently built place for having a BBQ
   bbq: String!
+  # A Gym / Fitness centre. A place with exercise machines and/or fitness/dance classes. It's a place to go for exercise (to "work out" as they say in the US) Otherwise known as a health club, or fitness club
   fitness_centre: String!
+  # A place that primarily sells cars (automobiles)
   car: String!
 }
 
