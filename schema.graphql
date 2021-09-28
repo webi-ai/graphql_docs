@@ -344,6 +344,18 @@ type PointOfInterest {
   agrarian: String!
   # This tag is used for venues with pay-to-play games, such as video games, driving simulators, pinball machines, merchandisers, etc. As opposed to leisure=adult_gaming_centre there is no age limit here.
   amusement_arcade: String!
+  # Marks whatever fishing is allowed, prohibited or permitted by an entity at specific location.
+  fishing: String!
+  # Shop focused on selling chocolate.
+  chocolate: String!
+  #It's not a real store, of course. You may want to use this tag when a store has closed, to avoid confusing other mappers who might not know about it (please leave anote=* ). Also, you can keep the corresponding object and simply edit it when a new store opens in the same location.
+  vacant: String!
+  # A place to read and/or lend books
+  library: String!
+  # A shop that primarily sells cannabis (also known as marijuana) or cannabis products. This tag is intended for use in places where specialised shops exist for legal cannabis sales. It is not appropriate for amenities such as cafes, bars, and pharmacies that also sell cannabis products. It should not be used to indicate informal or black market cannabis sales.
+  cannabis: String!
+  # To indicate the services in a beauty salon, spa, or hair salon.
+  spa: String!
 
 }
 
@@ -648,6 +660,12 @@ input OrderPointOfInterestInput {
     camp_site: OrderDirection
     agrarian: OrderDirection
     amusement_arcade: OrderDirection
+    fishing: OrderDirection
+    chocolate: OrderDirection
+    vacant: OrderDirection
+    library: OrderDirection
+    cannabis: OrderDirection
+    spa: OrderDirection
 
 }
 
@@ -875,6 +893,12 @@ input ReadPointOfInterestInput {
     car_repair: ReadStringInput
     camp_site: ReadStringInput
     agrarian: ReadStringInput
+    fishing: ReadStringInput
+    chocolate: ReadStringInput
+    vacant: ReadStringInput
+    library: ReadStringInput
+    cannabis: ReadStringInput
+    spa: ReadStringInput
     amusement_arcade: ReadStringInput
     and: [ReadPointOfInterestInput!]
     or: [ReadPointOfInterestInput!]

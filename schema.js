@@ -176,6 +176,12 @@
  * @property {string} camp_site
  * @property {string} agrarian
  * @property {string} amusement_arcade
+ * @property {string} fishing
+ * @property {string} chocolate
+ * @property {string} vacant
+ * @property {string} library
+ * @property {string} cannabis
+ * @property {string} spa
  */
 
 /**
@@ -438,6 +444,12 @@
  * @property {OrderDirection} [camp_site]
  * @property {OrderDirection} [agrarian]
  * @property {OrderDirection} [amusement_arcade]
+ * @property {OrderDirection} [fishing]
+ * @property {OrderDirection} [chocolate]
+ * @property {OrderDirection} [vacant]
+ * @property {OrderDirection} [library]
+ * @property {OrderDirection} [cannabis]
+ * @property {OrderDirection} [spa]
  */
 
 /**
@@ -663,6 +675,12 @@
  * @property {ReadStringInput} [car_repair]
  * @property {ReadStringInput} [camp_site]
  * @property {ReadStringInput} [agrarian]
+ * @property {ReadStringInput} [fishing]
+ * @property {ReadStringInput} [chocolate]
+ * @property {ReadStringInput} [vacant]
+ * @property {ReadStringInput} [library]
+ * @property {ReadStringInput} [cannabis]
+ * @property {ReadStringInput} [spa]
  * @property {ReadStringInput} [amusement_arcade]
  * @property {Array<ReadPointOfInterestInput>} [and]
  * @property {Array<ReadPointOfInterestInput>} [or]
