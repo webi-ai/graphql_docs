@@ -169,6 +169,13 @@
  * @property {string} bbq
  * @property {string} fitness_centre
  * @property {string} car
+ * @property {string} pub
+ * @property {string} supermarket
+ * @property {string} art
+ * @property {string} car_repair
+ * @property {string} camp_site
+ * @property {string} agrarian
+ * @property {string} amusement_arcade
  */
 
 /**
@@ -424,6 +431,13 @@
  * @property {OrderDirection} [bbq]
  * @property {OrderDirection} [fitness_centre]
  * @property {OrderDirection} [car]
+ * @property {OrderDirection} [pub]
+ * @property {OrderDirection} [supermarket]
+ * @property {OrderDirection} [art]
+ * @property {OrderDirection} [car_repair]
+ * @property {OrderDirection} [camp_site]
+ * @property {OrderDirection} [agrarian]
+ * @property {OrderDirection} [amusement_arcade]
  */
 
 /**
@@ -643,6 +657,13 @@
  * @property {ReadStringInput} [bbq]
  * @property {ReadStringInput} [fitness_centre]
  * @property {ReadStringInput} [car]
+ * @property {ReadStringInput} [pub]
+ * @property {ReadStringInput} [supermarket]
+ * @property {ReadStringInput} [art]
+ * @property {ReadStringInput} [car_repair]
+ * @property {ReadStringInput} [camp_site]
+ * @property {ReadStringInput} [agrarian]
+ * @property {ReadStringInput} [amusement_arcade]
  * @property {Array<ReadPointOfInterestInput>} [and]
  * @property {Array<ReadPointOfInterestInput>} [or]
  */

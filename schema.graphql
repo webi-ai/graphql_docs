@@ -330,6 +330,21 @@ type PointOfInterest {
   fitness_centre: String!
   # A place that primarily sells cars (automobiles)
   car: String!
+  # A pub or public house is an establishment that sells alcoholic drinks that can be consumed on the premises. Pubs commonly sell food which also can be eaten on the premises. They are characterised by a traditional appearance and a relaxed atmosphere. You can usually sit down and there is usually no loud music to disturb conversation.
+  pub: String!
+  # A  supermarket is a large shop for groceries and other goods, including meat and fresh produce. It's a full service grocery store that often sells a variety of non-food products as well. Almost always part of a chain, e.g. Tesco, Safeway. Stores that do not provide full service grocery departments, including meat and fresh produce, are generally not considered supermarkets for historical reasons.
+  supermarket: String!
+  # A shop that primarily sells works of art, such as paintings or sculptures. Other shop types may supply artistic works as well, but if their main product are practical goods such as furniture or kitchenware, use another type.
+  art: String!
+  # A shop/service that primarily repairs cars/automobiles (usually independent of a specific car brand). These are also known as auto mechanics or garages. Some may sell gasoline/petrol - this should be mapped separately as amenity=fuel.
+  car_repair: String!
+  #The tag tourism=camp_site is used to map a campsite (UK) or campground (North American): an area, usually divided into a number of pitches, where people can camp overnight using tents, camper vans or caravans (aka RVs or motorhomes).
+  camp_site: String!
+  # shop=agrarian Shop specializing in the sale of agricultural inputs such as: pesticides, fertilizers, certified seed, feeds, agri tools, parts for agricultural machines etc:. shop=agrarian is a professional shop cooperating often with agricultural companies. Focused on One, max three product groups for professional farmers e.g feed;seed.
+  agrarian: String!
+  # This tag is used for venues with pay-to-play games, such as video games, driving simulators, pinball machines, merchandisers, etc. As opposed to leisure=adult_gaming_centre there is no age limit here.
+  amusement_arcade: String!
+
 }
 
 # The definition of "building" is not straightforward. The OpenStreetMap definition is quite wide and includes not only objects considered as buildings by strict definitions but also building=static_caravan, building=houseboat and may include at least some building=storage_tank.
@@ -410,6 +425,7 @@ type Building {
   internet_access: String!
   # The key craft=* is used for a place producing or processing customized goods.
   craft: String!
+  
 }
 
 input ReadIDInput {
@@ -625,6 +641,14 @@ input OrderPointOfInterestInput {
     bbq: OrderDirection
     fitness_centre: OrderDirection
     car: OrderDirection
+    pub: OrderDirection
+    supermarket: OrderDirection
+    art: OrderDirection
+    car_repair: OrderDirection
+    camp_site: OrderDirection
+    agrarian: OrderDirection
+    amusement_arcade: OrderDirection
+
 }
 
 
@@ -845,6 +869,13 @@ input ReadPointOfInterestInput {
     bbq: ReadStringInput
     fitness_centre: ReadStringInput
     car: ReadStringInput
+    pub: ReadStringInput
+    supermarket: ReadStringInput
+    art: ReadStringInput
+    car_repair: ReadStringInput
+    camp_site: ReadStringInput
+    agrarian: ReadStringInput
+    amusement_arcade: ReadStringInput
     and: [ReadPointOfInterestInput!]
     or: [ReadPointOfInterestInput!]
 }
