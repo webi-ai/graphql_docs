@@ -733,6 +733,7 @@
  * @property {Array<Building>} readBuilding
  */
 
+
 /**
  * Retrieves POIs by tag and place.
  * @async
@@ -807,7 +808,6 @@ async function getNodes(tag,place,limit) {
  * @returns {Node} Building object
  * @throws {NotFoundError} When the user is not found.
  */
-
 
 async function getBuildings(tag,place,limit) {
     const result = await actor.graphql_query(`

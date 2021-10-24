@@ -944,12 +944,36 @@ input ReadEdgeInput {
 
 
 type Query {
+
+# async function getNodes(tag,place,limit) {
+#    const result = await actor.graphql_query(`
+#    query {
+#        readNode(
+#                        search: {${tag}: {contains: "${place}"}}
+#                        limit: ${limit}
+#                        offset: 0
+#                        order: {id: ASC}
+#      ) { lat lon tags id  }
+#    }
+#    
+#    `, JSON.stringify({}));
+
+#    const resultJSON = JSON.parse(result);
+
+#    const nodes = resultJSON.data.readNode;
+
+#    return nodes;
+# }
+
     readNode(
     search: ReadNodeInput
     limit: Int
     offset: Int
     order: OrderNodeInput
     ): [Node!]!
+
+
+
 
     readEdge(
     search: ReadEdgeInput
@@ -958,12 +982,59 @@ type Query {
     order: OrderEdgeInput
     ): [Edge!]!
 
+
+# async function getPOIs(tag,place,limit) {
+#    const result = await actor.graphql_query(`
+#    query{
+#        readPointOfInterest(
+#                    search: {${tag}: {contains: "${place}"}}
+#                          limit: ${limit}
+#                          offset: 0
+#                          order: {id: ASC}
+#        ) {
+#          id name phone opening_hours private_or_public lat lon
+#        }
+#      }
+#    `, JSON.stringify({}));
+
+#    const resultJSON = JSON.parse(result);
+
+#    const pois = resultJSON.data.readPointOfInterest;
+
+#    return pois;
+#}
+
     readPointOfInterest(
     search: ReadPointOfInterestInput
     limit: Int
     offset: Int
     order: OrderPointOfInterestInput
     ): [PointOfInterest!]!
+
+
+
+# async function getBuildings(tag,place,limit) {
+#    const result = await actor.graphql_query(`
+#    query{
+#        readBuilding(
+#                    search: {${tag}: {contains: "${place}"}}
+#                          limit: ${limit}
+#                          offset: 0
+#                          order: {id: ASC}
+#        ) {
+#        id name phone opening_hours private_or_public website
+#        }
+#      }
+#    `, JSON.stringify({}));
+#
+#    const resultJSON = JSON.parse(result);
+#
+#    const buildings = resultJSON.data.readBuilding;
+#
+#    return buildings;
+# }
+
+
 
     readBuilding(
     search: ReadBuildingInput
