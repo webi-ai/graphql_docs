@@ -732,3 +732,103 @@
  * @property {Array<PointOfInterest>} readPointOfInterest
  * @property {Array<Building>} readBuilding
  */
+
+/**
+ * Retrieves POIs by tag and place.
+ * @async
+ * @method
+ * @param {String} tag - query tag
+ * @param {String} place - Place to search
+ * @param {Int} limit - Limits search results to this number
+ * @returns {PointOfInterest} POIs object
+ * @throws {NotFoundError} When the user is not found.
+ */
+
+async function getPOIs(tag,place,limit) {
+    const result = await actor.graphql_query(`
+    query{
+        readPointOfInterest(
+                    search: {${tag}: {contains: "${place}"}}
+                          limit: ${limit}
+                          offset: 0
+                          order: {id: ASC}
+        ) {
+          id name phone opening_hours private_or_public lat lon
+        }
+      }
+    `, JSON.stringify({}));
+
+    const resultJSON = JSON.parse(result);
+
+    const pois = resultJSON.data.readPointOfInterest;
+
+    return pois;
+}
+
+/**
+ * Retrieves Nodes by tag and place.
+ * @async
+ * @method
+ * @param {String} tag - query tag
+ * @param {String} place - Place to search
+ * @param {Int} limit - Limits search results to this number
+ * @returns {Node} Node object
+ * @throws {NotFoundError} When the user is not found.
+ */
+
+async function getNodes(tag,place,limit) {
+    const result = await actor.graphql_query(`
+    query {
+        readNode(
+                        search: {${tag}: {contains: "${place}"}}
+                        limit: ${limit}
+                        offset: 0
+                        order: {id: ASC}
+      ) { lat lon tags id  }
+    }
+    
+    `, JSON.stringify({}));
+
+    const resultJSON = JSON.parse(result);
+
+    const nodes = resultJSON.data.readNode;
+
+    return nodes;
+}
+
+
+/**
+ * Retrieves Buildings by tag and place.
+ * @async
+ * @method
+ * @param {String} tag - query tag
+ * @param {String} place - Place to search
+ * @param {Int} limit - Limits search results to this number
+ * @returns {Node} Building object
+ * @throws {NotFoundError} When the user is not found.
+ */
+
+
+async function getBuildings(tag,place,limit) {
+    const result = await actor.graphql_query(`
+    query{
+        readBuilding(
+                    search: {${tag}: {contains: "${place}"}}
+                          limit: ${limit}
+                          offset: 0
+                          order: {id: ASC}
+        ) {
+        id name phone opening_hours private_or_public website
+        }
+      }
+    `, JSON.stringify({}));
+
+    const resultJSON = JSON.parse(result);
+
+    const buildings = resultJSON.data.readBuilding;
+
+    return buildings;
+}
+
+
+
